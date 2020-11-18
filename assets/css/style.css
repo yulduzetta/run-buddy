@@ -1,0 +1,57 @@
+/* removes these default browser-enforced styles. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* more on this crazy alphanumerical value in a minute! */
+    color: #39a6b2;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 20px 35px;
+  }
+
+header {
+    /* comment */
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+
+     /* Applies 20px to the top and bottom, then 35px to the left and right */
+    padding: 20px 35px;
+    background-color: #39a6b2;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #fce138;
+    margin: 0;
+    display: inline;
+}
+
+header a {
+    /* By default, the value is none, so we don't usually have to explicitly tell it not to do this. 
+    With <a> elements, however, the browser automatically applies a blue color and an underline, 
+    and we don't want the links to look like that. */
+    text-decoration: none;
+
+    color: #fce138;
+}
+
+header nav {
+    /* take the <nav> element and moved it to the right side. */
+    float: right;
+    margin: 7px 0;
+}
+
+header nav ul li {
+    /* block elements will always force the next element to be on the next line. 
+    To make the navigation links line up horizontally in a row, 
+    which is the eventual goal, we need to make it an inline element here.  */
+    display: inline;
+}
+
+header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+}
