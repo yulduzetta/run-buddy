@@ -42,10 +42,53 @@
                 </ul>
             </nav>
         </header>
-
-        <!-- hero/jumbotron -->
         <section>
+            <div>
+                <h3>Get Started Today</h3>
+                <!-- By default, the browser declares a <p> to be a block-level element, 
+                but—unlike a heading element—won't assign any changes to font size or weight. -->
+                <p>Fill out this form and one of our trainers will schedule a consult</p>
+                <!-- Add form element -->
+                <form>
+                    <!-- The for attribute in the <label> element programmatically links to the id attribute in the <input> element. -->
+                    <!-- Also,  Some elements, like <input>, don't contain any content or child elements, so the closing tag immediately follows the opening tag. T -->
+                    <label for="name">Enter full name:</label>
+                    <input type="text" placeholder="Your Name" name="name" id="name" />
+                    
+                    <!-- When a user inputs a value into an email input type and clicks the submit button, 
+                    the browser automatically validates that value. If the value doesn't look like an email address, t
+                    he browser will not submit the form. 
+                    Instead, the browser will display a helpful validation warning next to the email input field. -->
+                    <label for="email">Enter email address:</label>
+                    <input type="email" placeholder="Email Address" name="email" id="email" />
+                    
+                    <!-- Desktop browsers treat the tel input type the same as the default text type. 
+                    They don't automatically validate the user's inputted value. 
+                    However, browsers on mobile devices will display a numeric keypad for the user to input a value, r
+                    ather than a standard keyboard. This is a lovely experience for mobile users. 
+                    Considering that the majority of website visits come from browsers on mobile devices, 
+                    we should provide this experience. -->
+                    <label for="phone">Enter a telephone number:</label>
+                    <input type="tel" placeholder="Phone Number" name="phone" id="phone" />
+
+                    <p>Have you worked out with a trainer before?
+                        <input type="radio" name="trainer-confirm" id="trainer-yes"/>
+                        <label for="trainer-yes">Yes</label>
+                        <input type="radio" name="trainer-confirm" id="trainer-no" />
+                        <label for="trainer-no">No</label>
+                    </p>
+                    <p>
+                        I acknowledge that I am at least 18 years old of age.
+                        <label for="acknowledge"></label>
+                        <input type="checkbox" name="acknowledge" id="acknowledge"/>
+                    </p>
+                    <button type="submit">
+                        Get running!
+                    </button>
+                </form>
+            </div>
         </section>
+        <!-- end hero -->
 
         <!-- "what we do section" -->
         <section>
