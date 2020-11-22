@@ -42,25 +42,27 @@
                 </ul>
             </nav>
         </header>
-        <section>
-            <div>
+
+        <!-- hero section starts here -->
+        <section class="hero">
+            <div class="hero-form">
                 <h3>Get Started Today</h3>
                 <!-- By default, the browser declares a <p> to be a block-level element, 
-                but—unlike a heading element—won't assign any changes to font size or weight. -->
+                but—unlike a heading element, it won't assign any changes to font size or weight. -->
                 <p>Fill out this form and one of our trainers will schedule a consult</p>
                 <!-- Add form element -->
                 <form>
                     <!-- The for attribute in the <label> element programmatically links to the id attribute in the <input> element. -->
                     <!-- Also,  Some elements, like <input>, don't contain any content or child elements, so the closing tag immediately follows the opening tag. T -->
                     <label for="name">Enter full name:</label>
-                    <input type="text" placeholder="Your Name" name="name" id="name" />
+                    <input type="text" placeholder="Your Name" name="name" id="name" class="form-input" />
                     
                     <!-- When a user inputs a value into an email input type and clicks the submit button, 
                     the browser automatically validates that value. If the value doesn't look like an email address, t
                     he browser will not submit the form. 
                     Instead, the browser will display a helpful validation warning next to the email input field. -->
                     <label for="email">Enter email address:</label>
-                    <input type="email" placeholder="Email Address" name="email" id="email" />
+                    <input type="email" placeholder="Email Address" name="email" id="email" class="form-input"/>
                     
                     <!-- Desktop browsers treat the tel input type the same as the default text type. 
                     They don't automatically validate the user's inputted value. 
@@ -69,7 +71,7 @@
                     Considering that the majority of website visits come from browsers on mobile devices, 
                     we should provide this experience. -->
                     <label for="phone">Enter a telephone number:</label>
-                    <input type="tel" placeholder="Phone Number" name="phone" id="phone" />
+                    <input type="tel" placeholder="Phone Number" name="phone" id="phone"  class="form-input"/>
 
                     <p>Have you worked out with a trainer before?
                         <input type="radio" name="trainer-confirm" id="trainer-yes"/>
