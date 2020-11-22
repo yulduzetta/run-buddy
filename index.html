@@ -1,130 +1,163 @@
 <!DOCTYPE html>
 <!-- specifies default language for page -->
 <html lang="en-us">
-    <head>
-        <!-- provides extra info about the page for display, search engine optization and other reasons -->
-        <meta charset="UTF-8" />
-        <title>Run Buddy</title>
 
-        <!-- <link> element Tells the HTML document to go find a specific resource (file) 
+<head>
+    <!-- provides extra info about the page for display, search engine optization and other reasons -->
+    <meta charset="UTF-8" />
+    <title>Run Buddy</title>
+
+    <!-- <link> element Tells the HTML document to go find a specific resource (file) 
         and incorporate it into the document. It needs at least one attribute
         rel attribute annotates the nature of relationship  -->
-        <link rel="stylesheet" href="./assets/css/style.css" />
-    </head>
-    <body>
-        <!-- navigation -->
-        <header>
-            <h1>
-                <!-- The value of the href used here—a forward slash ("/")—
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <!-- navigation -->
+    <header>
+        <h1>
+            <!-- The value of the href used here—a forward slash ("/")—
                 will always represent the path to the topmost directory of an application or project. 
                 In this case, when a user clicks the <a> element, they will be taken to the topmost directory. 
                 And because there is no file specified, the index.html file will be loaded. -->
-                <a href = "/">RUN BUDDY</a>
-            </h1>
-            <!-- nav element is a semantic element introduced in html5 -->
-            <nav>
-                <!-- Unordered list element -->
-                <ul>
-                    <!-- List item element -->
-                    <li>
-                        <!-- Anchor element -->
-                        <a href = "#what-we-do"> What We Do</a>
-                    </li>
-                    <li>
-                        <a href = "#what-you-do">What You Do</a>
-                    </li>
-                    <li>
-                        <a href="#your-trainers">Your Trainers</a>
-                    </li>
-                    <li>
-                        <a href = "#reach-out">Reach Out</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+            <a href="/">RUN BUDDY</a>
+        </h1>
+        <!-- nav element is a semantic element introduced in html5 -->
+        <nav>
+            <!-- Unordered list element -->
+            <ul>
+                <!-- List item element -->
+                <li>
+                    <!-- Anchor element -->
+                    <a href="#what-we-do"> What We Do</a>
+                </li>
+                <li>
+                    <a href="#what-you-do">What You Do</a>
+                </li>
+                <li>
+                    <a href="#your-trainers">Your Trainers</a>
+                </li>
+                <li>
+                    <a href="#reach-out">Reach Out</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- hero section starts here -->
-        <section class="hero">
-            <div class="hero-form">
-                <h3>Get Started Today</h3>
-                <!-- By default, the browser declares a <p> to be a block-level element, 
+    <!-- hero section starts here -->
+    <section class="hero">
+        <div class="hero-form">
+            <h3>Get Started Today</h3>
+            <!-- By default, the browser declares a <p> to be a block-level element, 
                 but—unlike a heading element, it won't assign any changes to font size or weight. -->
-                <p>Fill out this form and one of our trainers will schedule a consult</p>
-                <!-- Add form element -->
-                <form>
-                    <!-- The for attribute in the <label> element programmatically links to the id attribute in the <input> element. -->
-                    <!-- Also,  Some elements, like <input>, don't contain any content or child elements, so the closing tag immediately follows the opening tag. T -->
-                    <label for="name">Enter full name:</label>
-                    <input type="text" placeholder="Your Name" name="name" id="name" class="form-input" />
-                    
-                    <!-- When a user inputs a value into an email input type and clicks the submit button, 
+            <p>Fill out this form and one of our trainers will schedule a consult</p>
+            <!-- Add form element -->
+            <form>
+                <!-- The for attribute in the <label> element programmatically links to the id attribute in the <input> element. -->
+                <!-- Also,  Some elements, like <input>, don't contain any content or child elements, so the closing tag immediately follows the opening tag. T -->
+                <label for="name">Enter full name:</label>
+                <input type="text" placeholder="Your Name" name="name" id="name" class="form-input" />
+
+                <!-- When a user inputs a value into an email input type and clicks the submit button, 
                     the browser automatically validates that value. If the value doesn't look like an email address, t
                     he browser will not submit the form. 
                     Instead, the browser will display a helpful validation warning next to the email input field. -->
-                    <label for="email">Enter email address:</label>
-                    <input type="email" placeholder="Email Address" name="email" id="email" class="form-input"/>
-                    
-                    <!-- Desktop browsers treat the tel input type the same as the default text type. 
+                <label for="email">Enter email address:</label>
+                <input type="email" placeholder="Email Address" name="email" id="email" class="form-input" />
+
+                <!-- Desktop browsers treat the tel input type the same as the default text type. 
                     They don't automatically validate the user's inputted value. 
                     However, browsers on mobile devices will display a numeric keypad for the user to input a value, r
                     ather than a standard keyboard. This is a lovely experience for mobile users. 
                     Considering that the majority of website visits come from browsers on mobile devices, 
                     we should provide this experience. -->
-                    <label for="phone">Enter a telephone number:</label>
-                    <input type="tel" placeholder="Phone Number" name="phone" id="phone"  class="form-input"/>
+                <label for="phone">Enter a telephone number:</label>
+                <input type="tel" placeholder="Phone Number" name="phone" id="phone" class="form-input" />
 
-                    <p>Have you worked out with a trainer before?
-                        <input type="radio" name="trainer-confirm" id="trainer-yes"/>
-                        <label for="trainer-yes">Yes</label>
-                        <input type="radio" name="trainer-confirm" id="trainer-no" />
-                        <label for="trainer-no">No</label>
-                    </p>
-                    <p>
-                        I acknowledge that I am at least 18 years old of age.
-                        <label for="acknowledge"></label>
-                        <input type="checkbox" name="acknowledge" id="acknowledge"/>
-                    </p>
-                    <button type="submit">
-                        Get running!
-                    </button>
-                </form>
-            </div>
-        </section>
-        <!-- end hero -->
+                <p>Have you worked out with a trainer before?
+                    <input type="radio" name="trainer-confirm" id="trainer-yes" />
+                    <label for="trainer-yes">Yes</label>
+                    <input type="radio" name="trainer-confirm" id="trainer-no" />
+                    <label for="trainer-no">No</label>
+                </p>
+                <p>
+                    I acknowledge that I am at least 18 years old of age.
+                    <label for="acknowledge"></label>
+                    <input type="checkbox" name="acknowledge" id="acknowledge" />
+                </p>
+                <button type="submit">
+                    Get running!
+                </button>
+            </form>
+        </div>
+    </section>
+    <!-- end hero -->
 
-        <!-- "what we do section" -->
-        <section>
-            <h2>What We Do</h2>
-        </section>
+    <!-- "what we do section" -->
+    <section id="what we do">
+        <h2>What We Do</h2>
+        <p>
+            butcher selfies chambray shabby chic gentrify readymade yr Echo Park XOXO Tumblr normcore Banksy direct
+            trade Blue Bottle chillwave you probably haven't heard of them single-origin coffee Vice fanny pack fixie
+            Odd Future Austin fingerstache pickled twee synth Wes Anderson Thundercats viral bitters flannel meggings
+            narwhal Marfa Schlitz sustainable Intelligentsia umami deep v craft
+        </p>
+    </section>
 
-        <!-- "what you do section" -->
-        <section>
-            <h2>What You Do</h2>
-        </section>
+    <!-- "what you do section" -->
+    <section id="what you do">
+        <h2>What You Do</h2>
+        <div>
+            <!-- insert this img element -->
+            <img src="./assets/images/step-1.svg" alt="" />
+            <h3>Step 1: Fill Out the Form Above.</h3>
+            <p>You're already here, so why not?</p>
+        </div>
 
-        <!-- "meet the trainers section" -->
-        <section>
-            <h2>Meet The Trainers</h2>
-        </section>
+        <div>
+            <img src="./assets/images/step-2.svg" alt="" />
+            <h3>Step 2: Consult with One of Our Trainers.</h3>
+            <p>Are you here to build muscle, lose weight, or just feel good?</p>
+        </div>
 
-        <!-- "reach out section" -->
-        <section>
-            <h2>Reach Out</h2>
-        </section>
+        <div>
+            <img src="./assets/images/step-3.svg" alt="" />
+            <h3>Step 3: Get Running.</h3>
+            <p>Hit the ground running (literally) once your trainer lays out your plan.</p>
+        </div>
 
-        <!-- footer -->
-        <footer>
-            <h2>
-                ❤️ Made with love by Run Buddy.
-            </h2>
-            <div>
-                <!-- Here, we're using the # as a placeholder for a privacy policy page that doesn't exist yet. 
+        <div>
+            <img src="./assets/images/step-4.svg" alt="" />
+            <h3>Step 4: See Results.</h3>
+            <p>Bi-weekly checkins with your trainer will keep you focused</p>
+        </div>
+    </section>
+
+    <!-- "meet the trainers section" -->
+    <section>
+        <h2>Meet The Trainers</h2>
+    </section>
+
+    <!-- "reach out section" -->
+    <section>
+        <h2>Reach Out</h2>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <h2>
+            ❤️ Made with love by Run Buddy.
+        </h2>
+        <div>
+            <!-- Here, we're using the # as a placeholder for a privacy policy page that doesn't exist yet. 
                 It's a way to show that there will be a link here eventually—
                 we can circle back after we create the page to update it. -->
-                <a href="#">Read Our Privacy Policy</a><br />
-                &copy; 2020 Run Buddy, Inc
-            </div>
-        </footer>
+            <a href="#">Read Our Privacy Policy</a><br />
+            &copy; 2020 Run Buddy, Inc
+        </div>
+    </footer>
 
-    </body>
+</body>
+
 </html>
