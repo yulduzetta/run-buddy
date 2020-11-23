@@ -12,3 +12,6 @@ https://yulduzetta.github.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by Yuduz Ibrahim
+
+### ©️2020 Run Buddy, Inc 
+
