@@ -52,18 +52,33 @@ header nav {
     margin: 7px 0;
 }
 
-header nav ul li {
-    /* block elements will always force the next element to be on the next line. 
-    To make the navigation links line up horizontally in a row, 
-    which is the eventual goal, we need to make it an inline element here.  */
-    display: inline;
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  /* The property align-items works like justify-content,but on the opposite axis. 
+  To "justify" information means to position it on the main axis, 
+  but to "align" it means to position it along the cross axis. 
+  In this case, we're vertically centering our content in the <nav> element. 
+  This might sound like a simple task, 
+  but it was only when this property was invented
+  that it became possible to achieve this type of vertical alignment without using JavaScript. */
+  align-items: center;
+
+  /* sets how a list item is styled (bullet points, dashes, etc.) 
+  and positioned (indented or outdented).*/
+  list-style: none;
 }
 
 header nav ul li a {
     margin: 0 30px;
     font-weight: lighter;
-    font-size: 22px;
-}
+    /* vw == viewport width (actual browser window size). 
+    This means that if the browser grows or shrinks, 
+    that size will change relative to the new overall width. */
+    font-size: 1.55vw 
+  }
 
 footer {
     width: 100%;
