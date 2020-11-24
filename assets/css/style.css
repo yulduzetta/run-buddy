@@ -56,6 +56,8 @@ header nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  
   
   /* The property align-items works like justify-content,but on the opposite axis. 
   To "justify" information means to position it on the main axis, 
@@ -84,17 +86,18 @@ footer {
     width: 100%;
     padding: 40px 35px;
     background: #fce138;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 footer h2 {
-    display: inline;
     color: #024e76;
     font-size: 30px;
     margin: 0;
 }
 
 footer div {
-    float: right;
     line-height: 1.5;
     text-align: right;
 }
