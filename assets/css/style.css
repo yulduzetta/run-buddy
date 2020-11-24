@@ -20,6 +20,16 @@ header {
      /* Applies 20px to the top and bottom, then 35px to the left and right */
     padding: 20px 35px;
     background-color: #39a6b2;
+    /* Makes the <header> a row by default, so there's no need to explicitly declare it.
+    And as you can see, flexbox evenly distributed the space of the parent element
+    (<header>) among the children elements (the <h1> and <nav> links).
+    What makes this more interesting is that both of those children are block-level 
+    elements by default,
+    and adding flexbox overrides that default behavior. */
+    display: flex;
+    /* Distributes all empty space evenly between child elements so they are evenly spaced apart. */
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header h1 {
@@ -27,7 +37,6 @@ header h1 {
     font-size: 36px;
     color: #fce138;
     margin: 0;
-    display: inline;
 }
 
 header a {
@@ -40,8 +49,6 @@ header a {
 }
 
 header nav {
-    /* take the <nav> element and moved it to the right side. */
-    float: right;
     margin: 7px 0;
 }
 
