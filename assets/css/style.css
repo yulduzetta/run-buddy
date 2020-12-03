@@ -182,9 +182,6 @@ specifically on the top and bottom margins */
     padding: 10px 20px;
     font-size: 16px;
   }
-  .intro {
-    text-align: center;
-  }
 
   .intro p {
     line-height: 1.7;
@@ -193,20 +190,21 @@ specifically on the top and bottom margins */
     font-size: 20px;
     /* works for horizontal centering, but does not vertically center elements. */
     margin: 0 auto;
+    text-align: center;
   }
 
   .steps { 
-    text-align: center;
     background: #fce138;
   }
 
   .section-title {
     font-size: 55px;
-    display: inline-block;
-    padding: 0 100px 20px 100px;
     border-bottom: 3px solid;
-    margin-bottom: 35px;
     color: #024e76;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
   }
   
   .primary-border {
@@ -242,7 +240,6 @@ specifically on the top and bottom margins */
   }
 
   .trainers {
-    text-align: center;
   }
 
   .trainer {
@@ -271,6 +268,12 @@ specifically on the top and bottom margins */
   .text-right {
     text-align: right;
   }
+
+  .flex-row {
+    /* The default flex-direction value for a flexbox is row,
+     so we do not need to explicitly declare it. */
+    display: flex;
+  }
   
   .trainer-bio h3 {
     font-size: 32px;
@@ -290,7 +293,6 @@ specifically on the top and bottom margins */
 
   /* REACH OUT STYLES START */
 .contact {
-    text-align: center;
     background: #024e76;
   }
 
