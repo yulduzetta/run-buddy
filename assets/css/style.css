@@ -29,6 +29,7 @@ header {
     display: flex;
     /* Distributes all empty space evenly between child elements so they are evenly spaced apart. */
     justify-content: space-between;
+    /* default value is set to none */
     flex-wrap: wrap;
 }
 
@@ -57,8 +58,6 @@ header nav ul {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  
-  
   /* The property align-items works like justify-content,but on the opposite axis. 
   To "justify" information means to position it on the main axis, 
   but to "align" it means to position it along the cross axis. 
@@ -78,7 +77,7 @@ header nav ul li a {
     font-weight: lighter;
     /* vw == viewport width (actual browser window size). 
     This means that if the browser grows or shrinks, 
-    that size will change relative to the new overall width. */
+    that size will change relative to the overall window width. */
     font-size: 1.55vw 
   }
 
@@ -190,11 +189,22 @@ specifically on the top and bottom margins */
     font-size: 20px;
     /* works for horizontal centering, but does not vertically center elements. */
     margin: 0 auto;
-    text-align: center;
+    text-align: center; 
   }
 
   .steps { 
     background: #fce138;
+  }
+
+  .step {
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 80%;
+    border-bottom: 1px solid #39a6b2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .section-title {
@@ -214,51 +224,68 @@ specifically on the top and bottom margins */
   .secondary-border {
     border-color: #39a6b2;
   }
-
-  .steps div {
-    margin-bottom: 80px;
-  }
   
-  .steps img {
-    width: 15%;
-    margin: 10px 0;
-  } 
-  
-  .steps h3 {
+  .step h3 {
     color: #024e76;
     font-size: 46px;
-    margin-top: 10px;
+    flex: 1 30%;
   }
-  
-  .steps p {
-    color: #39a6b2;
-    font-size: 23px;
+  .step-info {
+    flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
-  .steps span {
-    font-size: 38px;
+  .step-text {
+    flex: 12;
+  }
+
+  .step-img img {
+    /* limits width to be whatever its container is. */
+    max-width: 100%;
+  }
+  
+  .step-text p{
+    color: #39a6b2;
+    font-size: 18px;
+  }
+
+  .step-text h4 {
+    font-size: 26px;
+    line-height: 1.5;
+    color: #024e76;
+  }
+
+  .step-img {
+    flex: 1 12%;
+    margin-right: 20px;
   }
 
   .trainers {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .trainer {
-    width: 900px;
-    margin: 0 auto 30px auto;
+    margin: 20px;
     background: #024e76;
     color: #fce138;
-    overflow: auto
+    /* If all flexbox children have a value of flex: 1, 
+    that means they'll share any extra space evenly. */
+    flex: 1;
   }
 
   .trainer img {
-    width: 35%;
-    float: left;
+    width: 100%;
   }
   
   .trainer-bio {
-    padding: 35px;
-    float: left;
-    width: 65%;
+    padding: 25px;
+    line-height: 1.3;
   }
 
   .text-left {
@@ -276,19 +303,17 @@ specifically on the top and bottom margins */
   }
   
   .trainer-bio h3 {
-    font-size: 32px;
-    margin-bottom: 8px;
+    font-size: 28px;
   }
   
   .trainer-bio h4 {
     font-weight: lighter;
-    font-size: 26px;
-    margin-bottom: 25px;
+    font-size: 22px;
+    margin-bottom: 15px;
   }
   
   .trainer-bio p {
     font-size: 17px;
-    line-height: 1.3;
   }
 
   /* REACH OUT STYLES START */
