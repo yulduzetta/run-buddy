@@ -1,149 +1,101 @@
-/* removes these default browser-enforced styles. */
 * {
-    margin: 0;
-    padding: 0;
-    /* ignore padding in the overall width */
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    /* more on this crazy alphanumerical value in a minute! */
-    color: #39a6b2;
-    font-family: Helvetica, Arial, sans-serif;
-    padding: 20px 35px;
-  }
+  color: #39a6b2;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/* HEADER / NAV BAR STYLES START */
 
 header {
-    /* comment */
-    font-family: Helvetica, Arial, Helvetica, sans-serif;
-
-     /* Applies 20px to the top and bottom, then 35px to the left and right */
-    padding: 20px 35px;
-    background-color: #39a6b2;
-    /* Makes the <header> a row by default, so there's no need to explicitly declare it.
-    And as you can see, flexbox evenly distributed the space of the parent element
-    (<header>) among the children elements (the <h1> and <nav> links).
-    What makes this more interesting is that both of those children are block-level 
-    elements by default,
-    and adding flexbox overrides that default behavior. */
-    display: flex;
-    /* Distributes all empty space evenly between child elements so they are evenly spaced apart. */
-    justify-content: space-between;
-    /* default value is set to none */
-    flex-wrap: wrap;
+  padding: 20px 35px;
+  background-color: #39a6b2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 header h1 {
-    font-weight: bold;
-    font-size: 36px;
-    color: #fce138;
-    margin: 0;
+  font-weight: bold;
+  margin: 0;
+  font-size: 36px;
+  color: #fce138;
 }
 
 header a {
-    /* By default, the value is none, so we don't usually have to explicitly tell it not to do this. 
-    With <a> elements, however, the browser automatically applies a blue color and an underline, 
-    and we don't want the links to look like that. */
-    text-decoration: none;
-
-    color: #fce138;
+  text-decoration: none;
+  color: #fce138;
 }
 
 header nav {
-    margin: 7px 0;
+  margin: 7px 0;
 }
 
 header nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  /* The property align-items works like justify-content,but on the opposite axis. 
-  To "justify" information means to position it on the main axis, 
-  but to "align" it means to position it along the cross axis. 
-  In this case, we're vertically centering our content in the <nav> element. 
-  This might sound like a simple task, 
-  but it was only when this property was invented
-  that it became possible to achieve this type of vertical alignment without using JavaScript. */
   align-items: center;
-
-  /* sets how a list item is styled (bullet points, dashes, etc.) 
-  and positioned (indented or outdented).*/
   list-style: none;
 }
 
 header nav ul li a {
-    padding : 10px 15px;
-    font-weight: lighter;
-    /* vw == viewport width (actual browser window size). 
-    This means that if the browser grows or shrinks, 
-    that size will change relative to the overall window width. */
-    font-size: 1.55vw 
-  }
+  padding: 10px 15px;
+  font-weight: lighter;
+  font-size: 1.55vw;
+}
 
+/* HEADER / NAVBAR STYLES END */
+
+
+
+/* FOOTER STYLES START */
 footer {
-    width: 100%;
-    padding: 40px 35px;
-    background: #fce138;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  background: #fce138;
+  padding: 40px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 footer h2 {
-    color: #024e76;
-    font-size: 30px;
-    margin: 0;
+  color: #024e76;
+  font-size: 30px;
+  margin: 0;
 }
 
 footer div {
-    line-height: 1.5;
-    text-align: right;
+  line-height: 1.5;
+  text-align: right;
 }
 
 footer a {
-    color: #024e76;
+  color: #024e76;
 }
+/* END FOOTER STYLES */
 
+/* STYLE ALL SECTION TAGS */
 section {
-    padding: 60px;
-  }
+  padding: 60px;
+}
 
-/* Hero Style Start */
+/* HERO STYLES START */
 .hero {
-    background-image: url("../images/hero-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-/* Hero Style End */
-.hero-form {
-    /* shorthand property which includes all 3 values on one line */
-    border: solid 3px #024e76;
-    background-color: #fce138;
-    padding: 20px;
-    color: #024e76;
-    border-color: #024e76;
-    width: 40%;
-    margin: 3.5%;
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
-.hero-form h3 {
-    font-size: 24px;
-    /* reduces possible word wrapping */
-    margin: 0;
-}
-
-/* add some space to the <p> element to make it more pleasant to read, 
-specifically on the top and bottom margins */
-.hero-form p {
-    margin: 5px 0 15px 0
-}
-
-/* call to action */
 .hero-cta {
   width: 35%;
   text-align: right;
@@ -159,172 +111,183 @@ specifically on the top and bottom margins */
   color: #fce138;
 }
 
+.hero-form {
+  border: 3px solid #024e76;
+  background-color: #fce138;
+  padding: 20px;
+  color: #024e76;
+  width: 40%;
+  margin: 3.5%;
+}
+
+.hero-form h3 {
+  font-size: 24px;
+  margin: 0;
+}
+.hero-form p {
+  margin: 5px 0 15px 0;
+}
+
 .form-input {
-    /* set to a narrow 1px border to emphasize the sign-up requests. */
-    border: 1px solid #024e76;
-    /* instructs the browser to render the element either as a <block> or inline. */
-    display: block;
-    padding: 7px 15px;
-    font-size: 16px;
-    color: #024e76;
-    width: 100%;
-    margin-bottom: 15px;
+  border: 1px solid #024e76;
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: #024e76;
+  width: 100%;
+  margin-bottom: 15px; 
 }
 
 .hero-form label {
-    margin: 0 5px;
-  }
+  margin: 0 5px;
+}
 
-  .hero-form button {
-    color: yellow;
-    background-color: #024e76;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-  }
+.hero-form button {
+  color: #fce138;
+  background-color: #024e76;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+} 
+/* HERO STYLES END */
 
-  .intro p {
-    line-height: 1.7;
-    color: #39a6b2;
-    width: 80%;
-    font-size: 20px;
-    /* works for horizontal centering, but does not vertically center elements. */
-    margin: 0 auto;
-    text-align: center; 
-  }
 
-  .steps { 
-    background: #fce138;
-  }
+/* SECTION TITLE STYLES START */
+.section-title {
+  font-size: 48px;
+  border-bottom: 3px solid;
+  color: #024e76;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 0 auto 35px auto;
+  width: 50%;
+}
 
-  .step {
-    margin: 50px auto;
-    padding-bottom: 50px;
-    width: 80%;
-    border-bottom: 1px solid #39a6b2;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
+.primary-border {
+  border-color: #fce138;
+}
 
-  .section-title {
-    font-size: 48px;
-    border-bottom: 3px solid;
-    color: #024e76;
-    padding-bottom: 20px;
-    text-align: center;
-    margin: 0 auto 35px auto;
-    width: 50%;
-  }
-  
-  .primary-border {
-    border-color: #fce138;
-  }
-  
-  .secondary-border {
-    border-color: #39a6b2;
-  }
-  
-  .step h3 {
-    color: #024e76;
-    font-size: 46px;
-    flex: 1 30%;
-  }
-  .step-info {
-    flex: 2 70%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+.secondary-border {
+  border-color: #39a6b2;
+}
+/* SECTION TITLE STYLES END */
 
-  .step-text {
-    flex: 12;
-  }
+/* WHAT WE DO STYLES */
 
-  .step-img img {
-    /* limits width to be whatever its container is. */
-    max-width: 100%;
-  }
-  
-  .step-text p{
-    color: #39a6b2;
-    font-size: 18px;
-  }
+.intro p {
+  line-height: 1.7;
+  color: #39a6b2;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+}
+/* WHAT YOU DO STYLES END */
 
-  .step-text h4 {
-    font-size: 26px;
-    line-height: 1.5;
-    color: #024e76;
-  }
 
-  .step-img {
-    flex: 1 12%;
-    margin-right: 20px;
-  }
+/* WHAT YOU DO STYLES START */
+.steps { 
+  background: #fce138;
+}
 
-  .trainers {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+.step {
+  margin: 50px auto;
+  padding-bottom: 50px;
+  width: 80%;
+  border-bottom: 1px solid #39a6b2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .trainer {
-    margin: 20px;
-    background: #024e76;
-    color: #fce138;
-    /* If all flexbox children have a value of flex: 1, 
-    that means they'll share any extra space evenly. */
-    flex: 1;
-  }
+.step h3 {
+  color: #024e76;
+  font-size: 46px;
+  flex: 1 30%;
+}
 
-  .trainer img {
-    width: 100%;
-  }
-  
-  .trainer-bio {
-    padding: 25px;
-    line-height: 1.3;
-  }
+.step-info {
+  flex: 2 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-  .text-left {
-    text-align: left;
-  }
-  
-  .text-right {
-    text-align: right;
-  }
+.step-img {
+  flex: 1 12%;
+  margin-right: 20px;
+}
 
-  .flex-row {
-    /* The default flex-direction value for a flexbox is row,
-     so we do not need to explicitly declare it. */
-    display: flex;
-  }
-  
-  .trainer-bio h3 {
-    font-size: 28px;
-  }
-  
-  .trainer-bio h4 {
-    font-weight: lighter;
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-  
-  .trainer-bio p {
-    font-size: 17px;
-  }
+.step-img img {
+  max-width: 100%;
+}
 
-  /* REACH OUT STYLES START */
+.step-text {
+  flex: 12;
+}
+
+.step-text p {
+  color: #39a6b2;
+  font-size: 18px;
+}
+
+.step-text h4 {
+  font-size: 26px;
+  line-height: 1.5;
+  color: #024e76;
+}
+
+/* WHAT YOU DO STYLES END */
+
+/* MEET THE TRAINERS START */
+.trainers {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.trainer {
+  margin: 20px;
+  flex: 1;
+  background: #024e76;
+  color: #fce138;
+}
+
+.trainer img {
+  width: 100%;
+}
+
+.trainer-bio {
+  padding: 25px;
+  line-height: 1.3;
+}
+
+.trainer-bio h3 {
+  font-size: 28px;
+}
+
+.trainer-bio h4 {
+  font-weight: lighter;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.trainer-bio p {
+  font-size: 17px;
+}
+/* TRAINER STYLES END */
+
+/* REACH OUT STYLES START */
 .contact {
-    background: #024e76;
-  }
+  background: #024e76;
+}
 
 .contact h2 {
-    color: #fce138;
-  }
+  color: #fce138;
+}
 
 .contact-info {
   display: flex;
@@ -338,58 +301,67 @@ specifically on the top and bottom margins */
 }
 
 .contact-info iframe {
-    height: 400px;
+  height: 400px;
 }
 
 .contact-info div {
-    color: white;
-  }
+  color: white;
+}
 
-  .contact-info h3 {
-    color: #fce138;
-    font-size: 32px;
-  }
-  
-  .contact-info p, .contact-info address {
-    margin: 20px 0;
-    line-height: 1.5;
-    font-size: 16px;
-    font-style: normal;
-  }
+.contact-info h3 {
+  color: #fce138;
+  font-size: 32px;
+}
 
-  .contact-form input, .contact-form textarea {
-    border: 1px solid #024e76;
-    display: block;
-    padding: 7px 15px;
-    font-size: 16px;
-    color: #024e76;
-    width: 100%;
-    margin-bottom: 15px;
-    margin-top: 5px;
-  }
+.contact-info p, .contact-info address {
+  margin: 20px 0;
+  line-height: 1.5;
+  font-size: 16px;
+  font-style: normal;
+}
 
-  .contact-form button {
-    width: 100%;
-    border: none;
-    background: #fce138;
-    color: #024e76;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 16px;
-  }
-  
-  .contact-info a {
-    color: #fce138;
-  }
-  /* REACH OUT STYLES END */
+.contact-form input, .contact-form textarea {
+  border: 1px solid #024e76;
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: #024e76;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.contact-form button {
+  width: 100%;
+  border: none;
+  background: #fce138;
+  color: #024e76;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+}
+
+.contact-info a {
+  color: #fce138;
+}
+
+
+/* REACH OUT STYLES END */
+
+/* UTILITIES */
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex-row {
+  display: flex;
+}
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-/* !!!Order Matters 
-/* In this case, we put the biggest screen size first and worked downward, 
-using max-width as the way of determining if a media query should be applied or not. 
-What would happen if we reversed that order by putting 575px first and 980px last? 
-The font-size would stay at 980px even if the screen became smaller than 575px wide. */
-
 @media screen and (max-width: 980px) {
   header {
     padding-bottom: 0;
@@ -415,6 +387,7 @@ The font-size would stay at 980px even if the screen became smaller than 575px w
     text-align: center;
     width: 100%;
   }
+
   .hero-cta, .hero-form {
     width: 100%;
   }
@@ -422,14 +395,12 @@ The font-size would stay at 980px even if the screen became smaller than 575px w
   .hero-cta {
     text-align: center;
   }
+
   .section-title {
     width: 80%;
   }
   
   .trainer {
-    /* Because it is only two values, the properties being given values are flex-grow and flex-basis. 
-    Because flex-grow is set to 0, 
-    it won't grow to take up unused space and will stay at the 70% we used for flex-basis. */
     flex: 0 70%;
   }
   
@@ -438,10 +409,12 @@ The font-size would stay at 980px even if the screen became smaller than 575px w
   }
 }
 
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
   section {
     padding: 30px 15px;
   }
+
   .step h3 {
     flex: 1 100%;
     text-align: center;
@@ -465,8 +438,8 @@ The font-size would stay at 980px even if the screen became smaller than 575px w
   }
 }
 
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
-
   .hero-form button {
     width: 100%;
   }
@@ -490,6 +463,7 @@ The font-size would stay at 980px even if the screen became smaller than 575px w
   .contact-info > * {
     flex: 0 100%;
   }
+
   .contact-form {
     order: 3;
   }
